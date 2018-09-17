@@ -25,6 +25,8 @@ group :test do
 end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bootstrap', '~> 4.1', '>= 4.1.3'
+gem 'city-state', '~> 0.0.13'
+gem 'turbolinks', '~> 5'
 gem 'pg'
 group :development do
   gem 'better_errors'

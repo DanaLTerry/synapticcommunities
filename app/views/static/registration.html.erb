@@ -62,24 +62,26 @@
                         <%= f.text_field :street_address, placeholder: "address"%>
                   </div>
 
-                  <div class="white-space space-small"></div>
+                 <div class="white-space space-small"></div>
                   <div class="field">
                         <!-- Country -->
                             <label>Country</label>
                         <%= label_tag :country %>
                         <%= select_tag :country, options_for_select(CS.countries.map { |c| [c[1], c[0]] } ) %>
                   </div>
+
+                   <div class="field">
+                   <!-- State -->
+                        <label>State</label>
+                        <%= label_tag :state %>
+                        <%= select_tag :state, options_for_select([]) %>
+                  </div>
+
                   <div class="field">
                         <!-- City -->
                             <label>City</label>
-                        <%= form.label :city %>
-                        <%= form.select :city, options_for_select([]) %>
-                  </div>
-                  <div class="form-group">
-                  <!-- State -->
-                        <label>State</label>
-                        <%= label_tag :state %>
-                        <%= select_tag :state, option_for_select([]) %>
+                        <%= label_tag :hometown %>
+                        <%= select_tag :hometown, options_for_select([]) %>
                   </div>
                   <div class="form-group">
                         <label>Zip/Postal Code</label>
@@ -245,24 +247,3 @@
       <% end %>
 </div>
 
-<script>
-      // Find the state select box
-      var state = document.getElementById("add-state");
-      console.log(state)
-
-      // Clear the options in the select box
-      while (state.firstChild) state.removeChild(state.firstChild);
-
-      // Add a placeholder
-      var placeholder = document.createElement("option");
-      placeholder.text = "Choose a state";
-      placeholder.value = "";
-      placeholder.placeholder = true;
-      state.appendChild(placeholder);
-
-      // Add the states
-      <% @states.each do |s| %>
-      state.options[state.options.length] = new Option('<%= s[1] %>', '<%= s[0] %>')
-      <% end %>
-      
-</script>
