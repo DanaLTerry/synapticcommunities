@@ -13,3 +13,138 @@
  *= require_tree .
  *= require_self
  */
+ * { 
+    box-sizing: border-box; 
+    margin:0;
+    padding:0;
+  } 
+
+.navbar{
+    color: #2984A0!important;
+}
+
+.nav_img{
+    height: 4em !important;
+}
+
+.logo {
+      float: center!important;
+      width: 700px!important;
+      margin-right: 0em;
+      margin-left: 3em;
+      margin-top: 4em;
+      margin-bottom: 0em;
+  }
+
+  .logo_home {
+    float: center!important;
+    width: auto;
+    height: auto;
+    max-width: 60em!important;
+    margin-right: 0em;
+    margin-left: 0em;
+    margin-top: 5em;
+    margin-bottom: 0em;
+}
+
+  .hometext{
+      color: #2984A0;
+      font-family: Avenir Next !important;
+      font-size: 1em; 
+      text-align: justify!important;
+      line-height: 1.5rem!important;
+      margin-left: 0em!important;
+      margin-right: 0em!important;
+      margin-top: 5em!important;
+  }
+  
+  .copyright{
+    color: #2984A0!important;
+    font-family: Avenir Next !important;
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 1em!important; 
+  }
+
+  /* code for all programs */
+  .pagetitle{
+    text-align: center!important;
+    color: #2984A0;
+    font-family: Avenir Next !important;
+    margin-top: 8em;
+  }
+  
+  /* All photo headings */
+  .photoheading{
+    margin-top: 3em!important;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40em;
+    height: auto;
+  }
+
+/* code for all programs */
+  .medtext{
+    color: #2984A0;
+    font-family: Avenir Next !important;
+    font-size: 1em!important; 
+    text-align: justify!important;
+    line-height: 1.5rem!important;
+    margin-left: 0em!important;
+    margin-right: 0em!important;
+    margin-top: 3em!important;
+  }
+
+  /* 'Meet Our Team' Headshots */
+  .dana-headshot {
+    float: left;
+    margin-right: 20px;
+    align: middle;
+    width: 200px;
+  }
+
+  .cesar-headshot {
+    float: left;
+    margin-right: 20px;
+    align: middle;
+    width: 200px;
+  }
+
+  .gerald-headshot {
+    float: left;
+    margin-right: 20px;
+    align: middle;
+    width: 200px;
+  }
+
+  .angela-headshot {
+    float: left;
+    margin-right: 20px;
+    align: middle;
+    width: 200px;
+  }
+
+  .trip-container {
+    display: flex; 
+    flex-direction: row; 
+    height: 10%; 
+}
+
+.trip-a, .trip-b {
+    width: 45%;
+}
+
+.trip-b {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+
+.trip-details {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+  

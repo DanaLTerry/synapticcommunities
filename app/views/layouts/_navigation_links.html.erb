@@ -1,1 +1,57 @@
 <%# add navigation links to this file %>
+<!-- Favicon -->
+	<link rel="shortcut icon" type="image/jpg" href="/favicon.ico"/>
+	<link rel="shortcut icon" type="image/jpg" href="../SCApp_rails/app/assets/images/favicon.ico"/>
+
+<%# add navigation links to this file %>
+					<li class="nav-item active">
+						 <!-- <a class="nav-link" href="/">HOME <span class="sr-only">(current)</span></a> -->
+						<%= link_to 'HOME', root_path, class: 'nav-link' %>
+					</li>
+	
+					<li class="nav-item">
+						<%= link_to 'Nicaraguan Snapshots', root_path, class: 'nav-link' %>
+					</li>
+								
+		
+						<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >PROGRAMS</a>
+							
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<%= link_to 'MEDICAL', medical_path, class:"dropdown-item" %>
+							<%= link_to 'DENTAL', dental_path, class:"dropdown-item" %>
+							<%= link_to 'EDUCATION', education_path, class:"dropdown-item" %>
+							<%= link_to 'THE INNOVATION LAB', root_path, class:"dropdown-item" %>
+							<%= link_to 'FAQs', faq_path, class:"dropdown-item" %>
+							<%= link_to 'CODE OF CONDUCT', coc_path, class:"dropdown-item" %>
+						</div>
+					</li>
+<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">TRIPS</a>
+	
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<%= link_to 'UPCOMING TRIP', root_path, class:"dropdown-item" %>
+								<%= link_to 'MAKE A PAYMENT', payment_path, class:"dropdown-item" %>
+								</div>
+						</li>
+						<li class="nav-item">
+								<%= link_to 'LOGIN', root_path, class:"nav-link" %>
+							</li>
+							<li class="nav-item">
+									<%= link_to 'MEET OUR TEAM', team_path, class:"nav-link" %>
+							</li>
+								<li class="nav-item">
+										<%= link_to 'CONTACT US', root_path, class:"nav-link" %>
+									</li>
+		
+					<!-- <li class="nav-item">
+						<a class="nav-link disabled" href="#">Disabled</a>
+					</li> -->
+				<!--<form class="form-inline">
+								<div class="input-group">
+									<div class="input-group-prepend">
+									</div>
+									<input type="text" class="form-control" placeholder="Search" aria-label="Search">
+								</div> 
+							</form> -->
