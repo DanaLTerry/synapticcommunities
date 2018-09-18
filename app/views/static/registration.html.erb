@@ -7,12 +7,16 @@
             <p>*A payment must be submitted upon registration. Registration without a payment will not be considered a full
                   registration and thus fail to secure your spot in the program. </p>
             <p>*As we are a registered 501(c)3 non-profit, all payments are considered donations and thus non-refundable.</p>
+           
+           <br>
+           <br>
+           <br>
             <h1>PARTICIPANT INFORMATION</h1>
             <div class="container-fluid">
                   <div class="row">
                         <div class="col-xs-12">
                               <div class="col-xs-2">
-                                    <%= link_to 'Home', root_path %>
+                                   
                                           <i class="fa fa-angle-left icon-back color-black" aria-hidden="true"></i>
                               
                               </div>
@@ -33,10 +37,10 @@
                               <%# end %>
                         </ul>
                   </div> -->
-            
+            <br>
                   <%= form_for :registration do |f|%>
                   <div class="form-group">
-                        <label>Title</label>
+                        <label>Title</label> 
                         <%= f.select :title, options_for_select([["Dr."],["RN"], ["Ms"],["Mr"]]),{},{class:"form-control profile name"} %>
                   </div>
                   <div class="form-group">
@@ -62,25 +66,22 @@
                         <%= f.text_field :street_address, placeholder: "address"%>
                   </div>
 
-                 <div class="white-space space-small"></div>
+                 
                   <div class="field">
                         <!-- Country -->
-                            <label>Country</label>
                         <%= label_tag :country %>
                         <%= select_tag :country, options_for_select(CS.countries.map { |c| [c[1], c[0]] } ) %>
                   </div>
 
                    <div class="field">
                    <!-- State -->
-                        <label>State</label>
                         <%= label_tag :state %>
                         <%= select_tag :state, options_for_select([]) %>
                   </div>
 
                   <div class="field">
                         <!-- City -->
-                            <label>City</label>
-                        <%= label_tag :hometown %>
+                        <%= label_tag :city %>
                         <%= select_tag :hometown, options_for_select([]) %>
                   </div>
                   <div class="form-group">
@@ -122,7 +123,8 @@
                   </div>
                   <div class="white-space space-small">
                   <label>Passport Issueing Country</label>
-                        <%= f.select :passport_country, {}, {}, {class:"form-control bfh-countries profile name", "data-country" => "United States", "data-name" => "country" }%>
+                        <!-- Country -->
+                        <%= select_tag :country, options_for_select(CS.countries.map { |c| [c[1], c[0]] } ) %>
             </div>
             <div class="from-group">
                   <%= f.label :passport_requirement, "My passport is valid for at least 6 months AFTER departure date or I will have a new passport before departure:" %><br>
@@ -162,14 +164,16 @@
             </div>
             <div class="form-group">
                   <label>Special Dietary Need(vegetarian, etc.)</label>
-                  <%= f.text_field :dietary_info, placeholder: "two emergency contacts" %>
+                  <%= f.text_field :dietary_info, placeholder: "dietary needs" %>
             </div>
             <div class="form-group">
                   <label>For emergency and planning purposes, please list any significant medical history, medications you are
                         taking, or known allergies</label>
-                  <%= f.text_field :medical, placeholder: "dietary needs" %>
+                  <%= f.text_field :medical, placeholder: "medical history" %>
             </div>
 
+<br>
+<br>
             <h3>STUDENT PARTICIPATION AGREEMENT</h3>
             <p>All persons/students participating in any travel program of Synaptic Communities, hereafter referred to as "SC",
                   must accept the following statements:1. I do voluntarily and without reservation on behalf of myself, my heirs
@@ -236,14 +240,22 @@
             <p>BE SURE TO MAKE YOUR OWN COPY OF THIS AGREEMENT FOR YOUR RECORDS</p>
 
             <div class="from-group">
-                  <%= f.label :read_agreement, "I have read and accept this agreement" %><br>
+                  <%= f.label :read_agreement, "I have read and accept this agreement" %>
                   <%= f.check_box :read_agreement, {}, {class:"checkbox-inline"} %>
             </div>
+            <br>
+            <br>
             <div class="col-xs-6 push-xs-3">
-                  <%= f.submit "GUARDAR", class: "btn btn-register btn-orange btn-block" %>
+                  <%= f.submit "Submit", class: 'btn-register' %>
             </div>
             <div class="clearfix"></div>
       </div>
-      <% end %>
+      <br>
+      <br>
+      <div class="copyright">
+		  <p>Copyright  Synaptic Communities. All rights reserved.</p>
+      </div>
+      </div>
+    <% end %>
 </div>
 
