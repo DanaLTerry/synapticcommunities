@@ -40,6 +40,10 @@
             <br>
                   <%= form_for :registration do |f|%>
                   <div class="form-group">
+                        <label>Trip Code</label>
+                        <%= f.select :code, options_for_select([["Med2019"],["Dent2019"], ["PH2019"]]),{},{class:"form-control profile name"} %>
+                  </div>
+                  <div class="form-group">
                         <label>Title</label> 
                         <%= f.select :title, options_for_select([["Dr."],["RN"], ["Ms"],["Mr"]]),{},{class:"form-control profile name"} %>
                   </div>
