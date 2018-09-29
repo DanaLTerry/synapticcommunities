@@ -11,18 +11,7 @@ Rails.application.routes.draw do
   get 'coc' => 'static#COC'
   get 'payment' => 'static#payment'
   get 'registration' => 'static#registration'
-  # gerat 'trips' => 'static#trips'
-
-# resources :states, only: :index
-
-
-  
-#   get 'registration/index'
-#   root to: 'trips#index'
-#   resources :states, only: :index
-#   resources :trips do
-#     resources :registration
-#   end 
+  get 'trips' => 'static#trips'
 
 end
 

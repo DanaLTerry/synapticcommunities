@@ -131,8 +131,8 @@
                         <%= select_tag :country, options_for_select(CS.countries.map { |c| [c[1], c[0]] } ) %>
             </div>
             <div class="from-group">
-                  <%= f.label :passport_requirement, "My passport is valid for at least 6 months AFTER departure date or I will have a new passport before departure:" %><br>
-                        <%# f.collection_check_boxes :yes, {}, {class:"checkbox-inline"} %>
+                  <%= f.label :passport_requirement, "My passport is valid for at least 6 months AFTER departure date or I will have a new passport before departure:" %>
+                         <%= f.check_box :read_agreement, {}, {class:"checkbox-inline"} %>
             </div>
             <div class="form-group">
                   <label>1st Emergency Contact First Name</label>
@@ -250,7 +250,7 @@
             <br>
             <br>
             <div class="col-xs-6 push-xs-3">
-                  <%= f.submit "Submit", class: 'btn-register' %>
+                  <%= f.submit "Submit", class:"btn btn-outline-dark" %>
             </div>
             <div class="clearfix"></div>
       </div>

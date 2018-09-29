@@ -125,30 +125,69 @@
     width: 200px;
   }
 
-  .trip-container {
-    display: flex; 
-    flex-direction: row; 
-    height: 10%; 
-}
-
-.trip-a, .trip-b {
-    width: 45%;
-}
-
-.trip-b {
-    display: flex; 
-    flex-direction: column;
-    align-items: center;
-}
-
-.trip-details {
-    display: flex; 
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
 .btn-register  {
   color: #2984A0!important;
   height: 2em !important;
   width: 5em !important;
+}
+.table--fixed th,
+.table--fixed td {
+  padding: 2em;  
+}
+
+.table--fixed thead th {
+  background-color:#333;
+  color:white;
+}
+
+.table--fixed tbody tr:nth-child(odd){
+  background-color:#DDD;
+}
+
+
+/*Flexbox logic */
+
+.table--fixed {
+  display: flex;
+  width: 100%;
+  flex-flow: column;
+}
+
+.table--fixed thead {
+  display: block;
+  > tr {
+    display: flex;
+    >th {
+      flex: 1;      
+    }
+    >th:nth-child(2) {
+      flex: 0 0 20px;
+    }
+  }
+}
+
+.table--fixed tbody { 
+  height: 100%;
+  width: 100%;
+}
+
+.table--fixed tbody {
+  display: block;
+  > tr {
+    display: flex;
+    // flex-wrap:nowrap;
+    >td {
+      flex: 1;
+      // display:flex;
+      // justify-content:flex-start;
+    }
+    >td:nth-child(2){
+      flex: 0 0 26px;
+    }
+  }
+}
+
+.buttons{
+  color: #2984A0 !important;
+  font-family: Avenir Next !important;
 }
